@@ -10,6 +10,21 @@ reposts2 = 42
 reposts3 = 221
 # Expected output: '221 is odd'
 
+def is_even interger
+    if(interger.even? == true)
+        p "#{interger} is even"
+    else
+        p "#{interger} is odd"
+    end
+end
+
+is_even(reposts1)
+# "7 is odd"
+is_even(reposts2)
+# "42 is even"
+is_even(reposts3)
+# "221 is odd"
+
 
 
 # -------------------2) Create a method that takes in a string and removes all the vowels from the string. Use the test variables provided. 
@@ -22,6 +37,16 @@ beatles_album2 = 'Sgt Pepper'
 beatles_album3 = 'Abbey Road'
 # Expected output: 'bby Rd'
 
+def vowel_remover string
+    p string.delete 'aeiouAEIOU', "^' '"
+end
+
+vowel_remover(beatles_album1)
+# 'Rbbr Sl'
+vowel_remover(beatles_album2)
+# 'Sgt Pppr'
+vowel_remover(beatles_album3)
+# 'bby Rd'
 
 
 # -------------------3) Create a method that takes in a string and checks if the string is a palindrome. A palindrome is the same word spelled forward or backward. Use the test variables provided.
@@ -32,3 +57,15 @@ palindrome_test_case2 = 'LEARN'
 # Expected output: 'LEARN is not a palindrome'
 palindrome_test_case3 = 'Rotator'
 # Expected output: 'Rotator is a palindrome'
+
+def palindrome_check string
+    if(string.upcase == string.upcase.reverse)
+        p "#{string} is a palindrome"
+    else
+        p "#{string} is not a palindrome"
+    end
+end
+
+palindrome_check(palindrome_test_case1)
+palindrome_check(palindrome_test_case2)
+palindrome_check(palindrome_test_case3)
